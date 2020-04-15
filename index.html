@@ -6,31 +6,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- title of site -->
-	<title>Sign in</title>
-
+	<title>新网后台登录中心</title>
 	<!-- For favicon png -->
-	<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png" />
-
+	<link rel="shortcut icon" type="image/icon" href="assets/img/favicon.png" />
 	<!--font-awesome.min.css-->
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
 	<!--animate.css-->
 	<link rel="stylesheet" href="assets/css/animate.css">
-
 	<!--bootstrap.min.css-->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
 	<!--style.css-->
 	<link rel="stylesheet" href="assets/css/style.css">
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-	<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
 </head>
 
 <body>
@@ -40,7 +26,7 @@
 
 			<div class="sign-content popup-in-content">
 				<div class="popup-in-txt">
-					<h2><i class="logo"></i><br />新网业务运营平台<span>欢迎登陆系统</span></h2>
+					<h2><i class="logo"><img src="assets/img/logo.png" alt=""></i><br />新网业务运营平台<span>欢迎登陆系统</span></h2>
 					<div class="row">
 						<div class="col-md-12">
 							<div class="signin-form">
@@ -56,14 +42,14 @@
 									<!--/.form-group -->
 									<div class="form-group">
 										<!-- <label for="signin_form">password</label> -->
-										<input type="password" name="password" tabindex="2" class="form-control lgPwdIpt" id="lgPwdIpt" placeholder="请输入密码">
+										<input type="password" name="password" tabindex="2" class="form-control lgPwdIpt" id="lgPwdIpt" placeholder="请输入密码" maxlength="50">
 										<span id="msg2" class="help-block">错误信息</span>
 									</div>
 									<!--/.form-group -->
 									<div class="form-group" style="margin-bottom: 8px;">
 										<div class="row row1">
 											<div class="col-md-8 col1">
-												<input type="text" tabindex="3" class="form-control" id="mobileyzm" placeholder="请输入验证码">
+												<input type="text" tabindex="3" class="form-control mobileyzm" id="mobileyzm" placeholder="请输入验证码" maxlength="6">
 											</div>
 											<div class="col-md-4 col2">
 												<button type="button" class="btn vcode_btn" id="yzmSend">
@@ -122,13 +108,13 @@
 			<p class="el-loading-text">拼命加载中</p>
 		</div>
 	</div>
-	<div class="alert-pop animated" id="alert-pop">
-		<div class="alert alert-danger" role="alert">短信验证码发送失败,请稍后再试!</div>
+	<div class="alert-pop" id="alert-pop">
+		<div class="alert alert-danger" role="alert"></div>
 	</div>
 
 
-	<script src="assets/js/jquery.js"></script>
-	<script src="https://sso.xinnet.com/js/jquery.cookie-1.3.1.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.cookie-1.3.1.js"></script>
 	<script src="assets/js/loginUtil-1.0.0.js"></script>
 </body>
 

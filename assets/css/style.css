@@ -12,7 +12,7 @@
     box-sizing:border-box;
 }
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
     font-size:14px;
     color: #a7a7a7;
     background: #fff;
@@ -32,7 +32,7 @@ a,a:hover,a:active,a:focus {
 h1,h2,h3,h4,h5,h6 { 
     margin: 0;
     color:#464d5f;
-    font-family: 'Poppins', sans-serif;
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
     text-transform: capitalize;
     font-weight: 400;
 }
@@ -41,7 +41,7 @@ p {
     line-height: 28px;
     color:#97a0ba;
     font-size:16px;
-    font-family: 'Poppins', sans-serif;
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
 }
 img{    border:none;max-width:100%; height:auto;}
 ul{
@@ -98,8 +98,9 @@ body{
     display: inline-block;
     width: 40px;
     height: 40px;
-    background: #28afff;
+    line-height: 40px;
     margin-bottom: 10px;
+    text-align: center;
 }
 .sign-content h2 span{
     display: block;
@@ -124,8 +125,8 @@ body{
     transition: linear .5s;
 }
 .signin-form  .form-control:hover,.signin-form  .form-control:focus{
-    border: 1px solid #474d5b;
-    color:#464e60;
+    border: 1px solid #0080cd;
+    color:#93b1d7;
     box-shadow: 0px 5px 10px rgba(45,50,64,.2);
 }
 
@@ -139,11 +140,10 @@ body{
 .signin-form input[type="text"],.signin-form input[type="email"],.signin-form input[type="password"]{
     height: 46px;
     border: 1px solid #3f4c5d;
-    background: #303c4a;
     color: #fff;
     font-size:16px;
-    text-transform: capitalize;
-    padding: 0 18px;
+    /* text-transform: capitalize; */
+    padding: 0 18px 0 30px;
 }
 .signin-form .has-error .form-control {
     border-color: #ff3646;
@@ -165,6 +165,15 @@ body{
 .signin-form .form-group{
     margin-bottom: 24px;
     position: relative;
+}
+.signin-form input.lgActIpt{
+    background: #303c4a url(../img/icon_01.png) no-repeat 10px 50%;
+}
+.signin-form input.lgPwdIpt{
+    background: #303c4a url(../img/icon_02.png) no-repeat 10px 50%;
+}
+.signin-form input.mobileyzm{
+    background: #303c4a url(../img/icon_03.png) no-repeat 10px 50%;
 }
 .signin-form .row1{
     margin: 0 -5px;
@@ -302,7 +311,7 @@ body{
     position: absolute;
     top: 5%;
     left: 0px;
-    visibility: hidden;
+    opacity: 0;
 }
 .alert-pop .alert{
     display: inline-block;

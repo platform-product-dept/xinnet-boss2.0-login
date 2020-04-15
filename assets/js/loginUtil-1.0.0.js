@@ -46,14 +46,15 @@ Login.prototype = {
         alert(errMsg);
     }
 };
-function showAlert() {
-    $("#alert-pop").addClass("slideInDown");
+function showAlert(msg, ss) {
+    msg = msg || '提示信息';
+    ss = ss || 2000;
+    $("#alert-pop").addClass("animated fadeInDown").find(".alert").html(msg);
     setTimeout(function(){
-        $("#alert-pop").css("visibility","visible").removeClass("slideInDown").addClass("slideInUp");
-    },10000)
+        $("#alert-pop").removeClass("animated fadeInDown").addClass("animated fadeOutUp");
+    }, ss)
 }
 $(function(){
-    showAlert()
     var accountName = $.cookie( 'LASTLOGINACCOUNT' );
     var isErrorLogin = false;
     if($("#keepAcctChk")[0].checked){
@@ -178,7 +179,7 @@ $(function(){
 	// }
 	
 	var errorCount = $('#errorCount').val();
-	console.log(errorCount)
+	// console.log(errorCount)
 	// if(errorCount>=3) {
 	// 	$('#identifyLine').show();
 	// 	$('#lgIdfCode')[0].src = ctx + '/validateCodeServlet?width=135&height=30&a=' + Math.random();
@@ -255,7 +256,7 @@ $(function(){
 				}
 			},
 			error: function(){
-				alert("短信验证码发送失败,请稍后再试!")
+                showAlert('短信验证码发送失败,请稍后再试!')
 			}
 		});
 	});
